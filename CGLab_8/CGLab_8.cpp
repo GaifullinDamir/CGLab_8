@@ -68,46 +68,47 @@ void display()
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->sizeX, image->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image->data);
 	glBegin(GL_POLYGON);
 	glNormal3f(0, -1, 0);
-	glTexCoord2f(0, 0); glVertex3f(-0.25, 0, -0.25);
-	glTexCoord2f(0, 1); glVertex3f(0.25, 0, -0.25);
-	glTexCoord2f(1, 0); glVertex3f(0.25, 0, 0.25);
-	glTexCoord2f(1, 1); glVertex3f(-0.25, 0, 0.25);
+	glTexCoord2f(0, 0); glVertex3f(-0.2, 0, -0.25);
+	glTexCoord2f(0, 1); glVertex3f(0.2, 0, -0.25);
+	glTexCoord2f(1, 0); glVertex3f(0.2, 0, 0.25);
+	glTexCoord2f(1, 1); glVertex3f(-0.2, 0, 0.25);
 	glEnd();
 	//грань лево низ
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->sizeX, image->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image->data);
 	glBegin(GL_POLYGON);
 	glNormal3f(0, 0.707, -0.707);
-	glTexCoord2f(0, 0); glVertex3f(-0.25, 0, -0.25);
+	glTexCoord2f(0, 0); glVertex3f(-0.2, 0, -0.25);
 	glTexCoord2f(1, 0); glVertex3f(-0.5, 1, -0.25);
 	glTexCoord2f(1, 1); glVertex3f(-0.5, 1, 0.25);
-	glTexCoord2f(0, 1); glVertex3f(-0.25, 0, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(-0.2, 0, 0.25);
 	
 	glEnd();
 	//грань право низ
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->sizeX, image->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image->data);
 	glBegin(GL_POLYGON);
 	glNormal3f(0, 0.707, -0.707);
-	glTexCoord2f(0, 0); glVertex3f(0.25, 0, -0.25);
+	glTexCoord2f(0, 0); glVertex3f(0.2, 0, -0.25);
 	glTexCoord2f(1, 0); glVertex3f(0.5, 1, -0.25);
 	glTexCoord2f(1, 1); glVertex3f(0.5, 1, 0.25);
-	glTexCoord2f(0, 1); glVertex3f(0.25, 0, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(0.2, 0, 0.25);
 	glEnd();
 	//// грань лево верх
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->sizeX, image->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image->data);
 	glBegin(GL_POLYGON);
 	glNormal3f(0, 0.707, -0.707);
-	glTexCoord2f(0, 0); glVertex3f(-0.5, 0, -0.25);
-	glTexCoord2f(1, 0); glVertex3f(-0.25, 2, -0.25);
-	glTexCoord2f(1, 1); glVertex3f(-0.25, 2, 0.25);
-	glTexCoord2f(0, 1); glVertex3f(-0.5, 0, 0.25);
+	glTexCoord2f(0, 0); glVertex3f(-0.5, 1, -0.25);
+	glTexCoord2f(1, 0); glVertex3f(-0.2, 2, -0.25);
+	glTexCoord2f(1, 1); glVertex3f(-0.2, 2, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(-0.5, 1, 0.25);
 	glEnd();
-	//// грань f4
+	//// грань право верх
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->sizeX, image->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, image->data);
 	glBegin(GL_POLYGON);
-	glNormal3f(0, 0.707, 0.707);
-	glTexCoord2f(0, 0); glVertex3f(1, 0, 1);
-	glTexCoord2f(0, 1); glVertex3f(0, 0, 1);
-	glTexCoord2f(1, 0); glVertex3f(0.5, 0.5, 0.5);
+	glNormal3f(0, 0.707, -0.707);
+	glTexCoord2f(0, 0); glVertex3f(0.2, 2, -0.25);
+	glTexCoord2f(1, 0); glVertex3f(0.5, 1, -0.25);
+	glTexCoord2f(1, 1); glVertex3f(0.5, 1, 0.25);
+	glTexCoord2f(0, 1); glVertex3f(0.2, 2, 0.25);
 	glEnd();
 
 	glPopMatrix(); // Восстанавливаем VM=Fwe
